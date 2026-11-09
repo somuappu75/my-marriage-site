@@ -1,0 +1,205 @@
+@import url("common.css");
+@import url("animation.css");
+
+html {
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+}
+
+.with-scrollbar {
+    scrollbar-width: auto !important;
+    -ms-overflow-style: auto !important;
+}
+
+.font-esthetic {
+    font-family: 'Sacramento', cursive !important;
+}
+
+.font-arabic {
+    font-family: 'Noto Naskh Arabic', serif !important;
+}
+
+.img-center-crop {
+    width: 13rem;
+    height: 13rem;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+html[data-bs-theme="dark"] .btn-transparent {
+    background-color: rgba(var(--bs-dark-rgb), 0.5) !important;
+    backdrop-filter: blur(0.5rem);
+}
+
+html[data-bs-theme="light"] .btn-transparent {
+    background-color: rgba(var(--bs-light-rgb), 0.5) !important;
+    backdrop-filter: blur(0.5rem);
+}
+
+.loading-page {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1056;
+}
+
+html[data-bs-theme="light"] .color-theme-svg {
+    color: rgb(255, 255, 255);
+    background-color: var(--bs-light);
+}
+
+html[data-bs-theme="dark"] .color-theme-svg {
+    color: rgb(0, 0, 0);
+    background-color: var(--bs-dark);
+}
+
+html[data-bs-theme="light"] .bg-light-dark {
+    background-color: rgb(var(--bs-light-rgb));
+}
+
+html[data-bs-theme="dark"] .bg-light-dark {
+    background-color: rgb(var(--bs-dark-rgb));
+}
+
+html[data-bs-theme="light"] .bg-white-black {
+    background-color: rgb(var(--bs-white-rgb));
+}
+
+html[data-bs-theme="dark"] .bg-white-black {
+    background-color: rgb(var(--bs-black-rgb));
+}
+
+.bg-cover-home {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mask-image: linear-gradient(0.5turn, transparent, black 40%, black 60%, transparent);
+}
+
+.width-loading {
+    width: 25%;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 992px) {
+    .width-loading {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .width-loading {
+        width: 75%;
+    }
+}
+
+svg {
+    display: block;
+    line-height: 0;
+    shape-rendering: geometricPrecision;
+    backface-visibility: hidden;
+}
+svg1 {
+    display: block;
+    line-height: 0;
+    shape-rendering: geometricPrecision;
+    backface-visibility: hidden;
+}
+.svg-wrapper {
+    overflow: hidden !important;
+    transform: translateZ(0) !important;
+}
+
+.no-gap-bottom {
+    margin-bottom: -0.75rem !important;
+}
+/* Hide the booting screen */
+#loading {
+    display: none !important;
+}
+
+/* Show the welcome screen immediately */
+#welcome {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.ganesh-img {
+  display: block;
+   width: 6rem;  
+  height: 6rem;  
+  margin: 0 auto;      /* keeps it centered */
+  margin-top: 15px; 
+
+  /* Enhance visibility on white background */
+  filter: brightness(0.9) contrast(1.3) saturate(1.4);
+}
+
+ 
+    .border-map-ev {
+        width: 90%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        height: 100% !important;
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+.divider {
+  text-align: center;
+  position: relative;
+  font-size: 0.75rem;
+  color: #d4af37;
+}
+.divider::before,
+.divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: #d4af37;
+}
+.divider::before { left: 0; }
+.divider::after { right: 0; }
+
+
+ .couple-names{
+    font-size: 28px;
+    font-weight: 500;
+    font-family: Allura-Regular;
+    margin-bottom: 40px;
+    color: rgb(255, 255, 255);
+}
+.glitter-box {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 10px 20px;
+  border: 3px solid #ffd700;
+  border-radius: 12px;
+  background: rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(255,215,0,0.6);
+}
+
+.glitter-heading {
+  font-size: 1rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff69b4, #ffd700);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4s infinite linear;
+  text-shadow: 0 0 10px rgba(255,255,255,0.6);
+}
+@keyframes shimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
